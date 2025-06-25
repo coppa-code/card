@@ -4,13 +4,13 @@ import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc, o
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCFQCgGzitreC4TP7gXnEOcxD6UcY3j3jo",
-  authDomain: "agenda-sea-c53f6.firebaseapp.com",
-  projectId: "agenda-sea-c53f6",
-  storageBucket: "agenda-sea-c53f6.firebasestorage.app",
-  messagingSenderId: "205972566423",
-  appId: "1:205972566423:web:4e7e90216137a3efe354d2",
-  measurementId: "G-X824L5R790"
+  apiKey: "AIzaSyBH_R7JmD_PYwDkmTdASmzPr4VlZRxSrq0",
+  authDomain: "agenda-de-cards.firebaseapp.com",
+  projectId: "agenda-de-cards",
+  storageBucket: "agenda-de-cards.firebasestorage.app",
+  messagingSenderId: "279512588811",
+  appId: "1:279512588811:web:927e5c8e77fdc6e5029d0e",
+  measurementId: "G-YECM3RD4WR"
 };
 
 // Initialize Firebase
