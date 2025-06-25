@@ -156,10 +156,7 @@ function loadFromLocalStorage() {
     events = JSON.parse(saved);
   } else {
     events = [
-      {date: '2025-07-08', title: 'Visita à COPPA', time: '09h', description: 'Projeto Adolecer +'},
-      {date: '2025-07-09', title: 'Escola Maringuela', time: '08h às 12h', description: ''},
-      {date: '2025-07-22', title: 'Educação ambiental para surdos', time: '', description: 'Manter contato com CB PM Teles - 71988941109'}
-    ];
+      ];
     saveToLocalStorage();
   }
   renderCalendar();
