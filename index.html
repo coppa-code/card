@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agenda de Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loading" id="loading">💾 Salvando...</div>
+  <div class="status-indicator status-offline" id="statusIndicator">🔴 Offline</div>
+  
+  <div class="container">
+    <div class="header">
+      <h1>✨ AGENDA SEA</h1>
+      <p>Eventos</p>
+    </div>
+    
+    <div class="main-content">
+      <div class="glass-card">
+        <div class="calendar-nav">
+          <button class="nav-btn" onclick="prevMonth()">‹</button>
+          <span class="month-year" id="monthYear"></span>
+          <button class="nav-btn" onclick="nextMonth()">›</button>
+        </div>
+        <div class="calendar-grid" id="calendar"></div>
+      </div>
+      
+      <div class="glass-card">
+        <h2 class="form-title">🎯 Criar Evento</h2>
+        <form id="eventForm">
+          <div class="form-group">
+            <label class="form-label">📅 Data</label>
+            <input type="date" class="form-input" id="eventDate" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">🎪 Título</label>
+            <input type="text" class="form-input" id="eventTitle" placeholder="Digite o título..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">⏰ Horário</label>
+            <input type="text" class="form-input" id="eventTime" placeholder="Ex: 09h às 12h">
+          </div>
+          <div class="form-group">
+            <label class="form-label">📝 Descrição</label>
+            <textarea class="form-input form-textarea" id="eventDescription" placeholder="Detalhes..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">🚀 Criar Evento</button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="glass-card">
+      <h2 class="events-title">🎉 Próximos Eventos</h2>
+      <div style="text-align: center; margin-bottom: 30px;">
+  <button class="btn-secondary" onclick="exportEvents()">💾 Exportar</button>
+  <button class="btn-secondary" onclick="importEvents()">📂 Importar</button>
+  <button class="btn-secondary" onclick="syncData()">🔄 Sincronizar</button>
+  <!-- NOVO BOTÃO AQUI -->
+  <button class="btn-secondary" onclick="window.open('calendario-ambiental.html', '_blank')">🌍 Calendário Ambiental</button>
+</div>
+      <div id="eventsList"></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
