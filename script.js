@@ -1,24 +1,21 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Firebase SDK imports
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';  
+import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc, onSnapshot } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';  
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBH_R7JmD_PYwDkmTdASmzPr4VlZRxSrq0",
-  authDomain: "agenda-de-cards.firebaseapp.com",
-  projectId: "agenda-de-cards",
-  storageBucket: "agenda-de-cards.firebasestorage.app",
-  messagingSenderId: "279512588811",
-  appId: "1:279512588811:web:927e5c8e77fdc6e5029d0e",
-  measurementId: "G-YECM3RD4WR"
+  apiKey: "AIzaSyCFQCgGzitreC4TP7gXnEOcxD6UcY3j3jo",
+  authDomain: "agenda-sea-c53f6.firebaseapp.com",
+  projectId: "agenda-sea-c53f6",
+  storageBucket: "agenda-sea-c53f6.firebasestorage.app",
+  messagingSenderId: "205972566423",
+  appId: "1:205972566423:web:4e7e90216137a3efe354d2",
+  measurementId: "G-X824L5R790"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 // Global variables
 let currentDate = new Date();
